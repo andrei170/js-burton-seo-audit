@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Where Your Website Leaks Clients | J.S. Burton, P.L.C.</title>
+<meta name="description" content="A client-acquisition teardown for J.S. Burton, P.L.C.: the one conversion layer a strong site is still missing, and what it's worth." />
+<meta name="theme-color" content="#000000" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Where Your Website Leaks Clients — J.S. Burton, P.L.C." />
+<meta property="og:description" content="Your site is strong and your form is solid. The gap is what happens after: no booking, no lead magnet, no follow-up. Here's what that's worth." />
+<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><rect width='32' height='32' rx='6' fill='%23000000'/><text x='16' y='22' font-family='Arial' font-weight='bold' font-size='13' fill='%23d4a84b' text-anchor='middle'>AG1</text></svg>" />
+<style>
+  :root{--bg:#000;--surface:#0a0a0f;--surface-2:#121219;--line:#23232e;--gold:#d4a84b;--gold-2:#b8922e;--ink:#f4f3ef;--muted:#a7a6b0;--bad:#e06a5a;--good:#5fcf8e;--max:880px}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter','Segoe UI',-apple-system,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+  .doc{max-width:var(--max);margin:0 auto;background:var(--surface);border-left:1px solid var(--line);border-right:1px solid var(--line)}
+  h1,h2,h3{line-height:1.18;letter-spacing:-.01em;font-weight:800}
+  .gold{background:linear-gradient(90deg,var(--gold),var(--gold-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  a{color:var(--gold)}
+  .ey{text-transform:uppercase;letter-spacing:.2em;font-size:.72rem;font-weight:800;color:var(--gold)}
+  .cover{padding:56px 50px 46px;background:radial-gradient(800px 360px at 80% -10%,rgba(212,168,75,.16),transparent 60%);border-bottom:1px solid var(--line)}
+  .logo{display:flex;align-items:center;gap:10px;margin-bottom:30px}
+  .logo .m{font-weight:800;font-size:1.2rem}.logo .m b{color:var(--gold)}
+  .logo span{font-size:.66rem;letter-spacing:.22em;color:var(--muted);text-transform:uppercase}
+  .cover h1{font-size:2.3rem;margin:12px 0 12px}
+  .cover p{color:var(--muted);max-width:580px;font-size:1.06rem}
+  .body{padding:44px 50px}
+  section{margin-bottom:42px}
+  h2{font-size:1.5rem;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+  p{margin-bottom:13px;color:#d9d8e0}
+  ul{margin:0 0 14px 20px}li{margin:7px 0;color:#d9d8e0}
+  .lead{border-left:3px solid var(--gold);background:var(--surface-2);padding:16px 20px;border-radius:0 10px 10px 0;margin:16px 0}
+  .g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:8px 0}
+  .col{background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+  .col h3{font-size:.82rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
+  .col.have h3{color:var(--good)}.col.miss h3{color:var(--bad)}
+  .col ul{list-style:none;margin:0}
+  .col li{padding:6px 0;font-size:.94rem}
+  .col.have li::before{content:"\2713  ";color:var(--good);font-weight:800}
+  .col.miss li::before{content:"\2717  ";color:var(--bad);font-weight:800}
+  .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:8px 0}
+  .stat{background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:20px 16px;text-align:center}
+  .stat .n{font-size:1.9rem;font-weight:800;color:var(--gold)}
+  .stat .l{color:var(--muted);font-size:.84rem}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.92rem}
+  th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--gold);font-weight:700}
+  .num{color:var(--bad);font-weight:800}.recover{color:var(--good);font-weight:800}
+  .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:16px 0}
+  .flow .node{background:var(--surface-2);border:1px solid var(--line);border-radius:10px;padding:11px 15px;font-weight:700;font-size:.88rem}
+  .flow .node.lit{border-color:var(--gold);color:var(--gold)}
+  .flow .arr{color:var(--gold);font-weight:800}
+  .cta{background:linear-gradient(120deg,var(--gold),var(--gold-2));color:#1a1405;border-radius:16px;padding:32px 28px;text-align:center}
+  .cta h2{color:#1a1405;border:none;padding:0;margin-bottom:8px}
+  .cta p{color:#3a2d08;margin-bottom:18px}
+  .cta a{display:inline-block;background:#000;color:var(--gold);font-weight:800;padding:14px 30px;border-radius:9px;text-decoration:none}
+  footer{padding:26px 50px;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem;text-align:center}
+  @media(max-width:680px){.cover,.body,footer{padding-left:24px;padding-right:24px}.cover h1{font-size:1.85rem}}
+  @media(max-width:600px){.g2,.g3{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="doc">
+  <div class="cover">
+    <div class="logo"><div class="m"><b>AG1</b> CONSULTING</div><span>&middot; Client Acquisition</span></div>
+    <div class="ey">A Client-Acquisition Teardown &middot; prepared for J.S. Burton, P.L.C.</div>
+    <h1>Your site is strong.<br/><span class="gold">It's missing the layer after the click.</span></h1>
+    <p>Credit first: your form is better than most, with name, phone, email and text consent built in. The gap is everything that should happen next. There is no booking, no lead magnet, and no follow-up, so the affluent prospect who is researching but not ready today slips away. Here is what that is worth in a market where one matter is worth thousands.</p>
+  </div>
+
+  <div class="body">
+
+    <section>
+      <h2>Your site today</h2>
+      <p>We looked at jsburton.org the way a prospective client would. Here is what is working, and the one layer it is missing.</p>
+      <div class="g2">
+        <div class="col have">
+          <h3>What you've got</h3>
+          <ul>
+            <li>A genuinely strong content site (blog, FAQ, location pages)</li>
+            <li>A solid contact form with phone, email and text consent</li>
+            <li>Clear "free consultation" calls to action</li>
+            <li>Four office locations with directions</li>
+          </ul>
+        </div>
+        <div class="col miss">
+          <h3>What's leaking</h3>
+          <ul>
+            <li>No online booking, an interested prospect has to wait for a callback</li>
+            <li>No lead magnet for the researcher who isn't ready to fill in a form yet</li>
+            <li>No automatic follow-up, so anyone who doesn't book on day one is gone</li>
+            <li>No instant response, so slower than the next firm they contact</li>
+          </ul>
+        </div>
+      </div>
+      <div class="lead">Your form catches the ready-now buyer. In estate planning, most high-value clients are not ready-now; they read, they compare, they sit on it. Without a magnet to capture them and a sequence to follow up, those are the matters that quietly go to a competitor.</div>
+    </section>
+
+    <section>
+      <h2>The cost of slow</h2>
+      <p>Speed and follow-up are the cheapest edge there is. Widely-cited lead-response research found:</p>
+      <div class="g3">
+        <div class="stat"><div class="n">21x</div><div class="l">more likely to qualify a lead if you respond within 5 minutes vs 30</div></div>
+        <div class="stat"><div class="n">~50%</div><div class="l">of people hire the first firm that responds to them</div></div>
+        <div class="stat"><div class="n">40+ hrs</div><div class="l">the average business takes to respond to a new enquiry</div></div>
+      </div>
+      <p style="font-size:.78rem;color:var(--muted)">Figures from widely-cited lead-response studies (MIT / InsideSales / Harvard Business Review). Exact numbers vary by source; the direction does not.</p>
+    </section>
+
+    <section>
+      <h2>What the leak is worth</h2>
+      <p>In Northern Virginia and Virginia Beach, estate, asset-protection and business-succession matters commonly run $4,000 to $10,000 and up. So the math is driven by value per client, not volume:</p>
+      <table>
+        <tr><th>If you recover&hellip;</th><th>At a $6,000 average</th></tr>
+        <tr><td>2 more matters / month</td><td class="recover">~$12,000 / month ($144k / yr)</td></tr>
+        <tr><td>4 more matters / month</td><td class="recover">~$24,000 / month ($288k / yr)</td></tr>
+      </table>
+      <div class="lead">Even at the low end, a single follow-up sequence and a booking link could be worth six figures a year, on traffic your strong site is already earning. You don't need more visitors first. You need to stop losing the ones you have.</div>
+      <p style="font-size:.78rem;color:var(--muted)">Illustrative estimate based on public matter values, not a forecast. Actual figures depend on your traffic, close rate and capacity.</p>
+    </section>
+
+    <section>
+      <h2>The fix</h2>
+      <div class="flow">
+        <div class="node">Visitor</div><span class="arr">&rarr;</span>
+        <div class="node lit">Capture</div><span class="arr">&rarr;</span>
+        <div class="node lit">Follow up fast</div><span class="arr">&rarr;</span>
+        <div class="node lit">Book</div><span class="arr">&rarr;</span>
+        <div class="node">Client</div>
+      </div>
+      <ul>
+        <li>A lead magnet that fits your market (for example, an "Estate planning checklist for Virginia families" or a short on-demand workshop)</li>
+        <li>Instant text and email when someone opts in, plus an alert to your team, so you respond in minutes</li>
+        <li>A follow-up sequence that nurtures the not-ready prospect and books the consult</li>
+        <li>One-click online scheduling wired to your calendar</li>
+      </ul>
+      <p style="font-size:.9rem;color:var(--muted)">Note: this is the conversion layer. Your bigger opportunity is still getting named in AI search, covered in your separate visibility audit. Together they are the full picture: get found, then convert.</p>
+    </section>
+
+    <div class="cta">
+      <h2>Want your leak mapped exactly?</h2>
+      <p>A quick call and we'll walk through your numbers and what it's worth to seal it.</p>
+      <a href="https://calendly.com/ag-copy/call-with-andrei">Book a call</a>
+      <p style="margin:14px 0 0;font-size:.84rem;color:#3a2d08">calendly.com/ag-copy/call-with-andrei &middot; info@andreicopy.net</p>
+    </div>
+
+  </div>
+  <footer>AG1 Consulting Ltd &middot; Prepared for J.S. Burton, P.L.C. Figures are illustrative estimates, not a forecast or guarantee.</footer>
+</div>
+</body>
+</html>
